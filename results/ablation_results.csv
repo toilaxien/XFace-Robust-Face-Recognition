@@ -1,0 +1,4 @@
+Variant,Q,G,R,Clean,Robust Mean,Drop,Retention
+Q-only,Yes,No,No,90.983,86.383,4.600,94.860
+Q+G,Yes,Yes,No,90.958,86.471,4.488,94.979
+Full XFace,Yes,Yes,Yes,90.933,86.653,4.280,95.213

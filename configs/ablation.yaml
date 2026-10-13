@@ -1,0 +1,15 @@
+variants:
+  q_only:
+    use_quality: true
+    use_gap: false
+    use_reliability: false
+  q_plus_g:
+    use_quality: true
+    use_gap: true
+    use_reliability: false
+  full_xface:
+    use_quality: true
+    use_gap: true
+    use_reliability: true
+
+base_config: configs/xface.yaml

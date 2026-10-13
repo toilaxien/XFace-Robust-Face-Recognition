@@ -1,0 +1,15 @@
+model:
+  backbone: resnet50
+  embedding_dim: 512
+  dropout: 0.4
+  head: adaface
+  num_classes: 10572
+head:
+  scale: 30.0
+  base_margin: 0.40
+  h: 0.333
+train:
+  batch_size: 512
+  epochs: 120
+  lr: 0.1
+  weight_decay: 0.0005

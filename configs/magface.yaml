@@ -1,0 +1,17 @@
+model:
+  backbone: resnet50
+  embedding_dim: 512
+  dropout: 0.4
+  head: magface
+  num_classes: 10572
+head:
+  scale: 30.0
+  min_margin: 0.45
+  max_margin: 0.80
+  min_norm: 10.0
+  max_norm: 110.0
+train:
+  batch_size: 256
+  epochs: 100
+  lr: 0.001
+  weight_decay: 0.0005

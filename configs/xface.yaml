@@ -1,0 +1,48 @@
+experiment:
+  name: xface_resnet50_casia
+  seed: 42
+
+data:
+  train_root: data/CASIA-WebFace/train
+  val_root: data/CASIA-WebFace/val
+  image_size: 112
+  num_workers: 4
+
+model:
+  backbone: resnet50
+  embedding_dim: 512
+  dropout: 0.4
+  head: xface
+  num_classes: 10572
+
+train:
+  batch_size: 512
+  epochs: 120
+  optimizer: sgd
+  lr: 0.1
+  momentum: 0.9
+  weight_decay: 0.0005
+  gradient_clip: 5.0
+  label_smoothing: 0.1
+  warmup_epochs: 3
+  schedule: cosine
+
+xface:
+  scale: 30.0
+  base_margin: 0.40
+  min_margin: 0.34
+  max_margin: 0.46
+  ema_momentum: 0.99
+  z_clip: 2.5
+  quality_alpha: 0.025
+  gap_alpha: 0.025
+  quality_gate: 2.0
+  gap_gate: 2.5
+  max_down_weight: 0.10
+  margin_warmup: 8
+  reliability_warmup: 20
+  adaptation_ramp: 25
+
+output:
+  checkpoint_dir: checkpoints
+  log_dir: logs
